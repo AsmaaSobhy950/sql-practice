@@ -85,3 +85,26 @@ FROM salaries
 WHERE salary >= 100000
   AND to_date = '9999-01-01';
 
+------------------SQL OR-----------------
+--Employees whose first_name = 'Georgi' OR 'Parto'
+SELECT *
+FROM employees
+WHERE first_name = 'Georgi'
+   OR first_name = 'Parto';
+
+--Titles where title is 'Engineer' OR 'Senior Engineer'
+SELECT *
+FROM titles
+WHERE title = 'Engineer'
+   OR title = 'Senior Engineer';
+----------------- SQL NOT --------------------
+-- Show employees not of gender 'M'
+SELECT *
+FROM employees
+WHERE gender != 'M';
+
+--Show departments whose name does NOT contain the word 'Sales'
+SELECT *
+FROM departments
+WHERE dept_name NOT LIKE '%Sales%';
+
